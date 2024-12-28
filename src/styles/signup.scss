@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('../../public/assets/Shape.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #94b0d9;
+}
+
+.login-signup-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 600px; 
+    width: 100%;
+    height: 400px; 
+}
+
+
+.login-signup-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+
+    h2 {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    p {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        color: #555;
+    }
+
+    form {
+        margin-top: 1.5rem;
+
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 60px;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .phone-input {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+
+            .country-code {
+                background-color: #f7f7f7;
+                padding: 0.75rem 1rem;
+                border-right: 1px solid #ccc;
+                font-size: 1rem;
+                color: #333;
+                background-color: #e5e5e5;
+            }
+
+            input {
+                flex: 1;
+                padding: 0.75rem;
+                border: none;
+                outline: none;
+                font-size: 1rem;
+                background-color: #e5e5e5;
+            }
+        }
+
+        .get-otp-button {
+            background-color: #4b8cff;
+            color: white;
+            font-size: 1.2rem;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #3a70c1;
+            }
+        }
+    }
+
+    .privacy-policy {
+        font-size: 0.9rem;
+        color: #888;
+        margin-top: 5rem;
+
+        a {
+            color: #4b8cff;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-signup-card {
+        padding: 2rem;
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    form {
+        .phone-input {
+            .country-code {
+                font-size: 0.9rem;
+                padding: 0.5rem 0.75rem;
+            }
+
+            input {
+                font-size: 0.9rem;
+                padding: 0.5rem;
+            }
+        }
+
+        .get-otp-button {
+            font-size: 1rem;
+            padding: 0.5rem;
+        }
+    }
+
+    .privacy-policy {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-signup-card {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        .phone-input {
+            .country-code {
+                font-size: 0.8rem;
+            }
+
+            input {
+                font-size: 0.8rem;
+            }
+        }
+
+        .get-otp-button {
+            font-size: 0.9rem;
+        }
+    }
+
+    .privacy-policy {
+        font-size: 0.7rem;
+    }
+}
