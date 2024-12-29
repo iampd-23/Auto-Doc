@@ -1,15 +1,25 @@
-//Screen 1 (Login / Signup)
+//First Screen - Signup or Login Page
 
 import React from "react";
-import "../styles/signup.scss";
+import { useNavigate } from "react-router-dom"; 
+import "../styles/SignupORLogin.scss";
 
 const LoginSignup = () => {
+  const navigate = useNavigate();
+
+  const handleGetOTP = (e) => {
+    e.preventDefault();
+    // Here, you could validate the phone number or do any needed checks
+    // If valid, navigate to the OTP page:
+    navigate("/otp");
+  };
+
   return (
     <div className="login-signup-container">
       <div className="login-signup-card">
         <h2>Login or Sign Up</h2>
         <p>We will send a verification code on this number</p>
-        <form>
+        <form onSubmit={handleGetOTP}>
           <label htmlFor="phone-number">Enter Phone Number</label>
           <div className="phone-input">
             <span className="country-code">+91</span>
