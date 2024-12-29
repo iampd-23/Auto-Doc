@@ -1,9 +1,15 @@
-/* Full-screen container with a blue background */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Apply the background image to a specific container class */
 .notfound-container {
   width: 100vw;
   height: 100vh;
-  background-color: #4b8bf4;
-  
+  background: url('../../public/assets/Shape.png') no-repeat center center; /* Add the background image here */
+  background-size: cover;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +18,7 @@
 /* White card, same dimensions as login/signup: 600px x 400px */
 .notfound-card {
   background: #fff;
-  border-radius: 16px;  /* match your login page’s card radius */
+  border-radius: 16px; /* match your login page’s card radius */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   text-align: center;
 
@@ -36,7 +42,7 @@
   }
 
   h2 {
-    font-size: 1.8rem; /* or match your login page’s font size, e.g. 2rem */
+    font-size: 1.8rem; /* or match your login page’s font size, e.g., 2rem */
     color: #333;
     margin-bottom: 1.5rem;
   }

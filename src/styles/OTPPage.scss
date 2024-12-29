@@ -1,117 +1,135 @@
+// body{
+//     margin: 0;
+//     font-family: Arial, sans-serif;
+//     background: url('../../public/assets/Shape.png') no-repeat center center;
+//     background-size: cover;
+//     display: flex;               
+//     justify-content: center;     
+//     align-items: center;         
+//     height: 100vh;
+//     background-color: #94b0d9;
+//   }
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: url('../../public/assets/Shape.png') no-repeat center center;
-    background-size: cover;
-    display: flex;               
-    justify-content: center;     
-    align-items: center;         
-    height: 100vh;
-    background-color: #94b0d9;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.otp-container {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('../../public/assets/Shape.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #94b0d9;
+}
+
+.otp-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+
+  max-width: 600px;
+  width: 100%;
+  height: 400px;
+  /* optional if you want a fixed height */
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
   }
-  
-  .otp-card {
-    background: white;
-    padding: 3rem;
-    border-radius: 16px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    text-align: center;
-  
-    
-    max-width: 600px;
-    width: 100%;
-    height: 400px; /* optional if you want a fixed height */
-  
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-  
-    p {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 2rem;
-    }
-  
-    .otp-form {
+
+  p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+
+  .otp-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+
+    .otp-inputs {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 80px;
-  
-      .otp-inputs {
-        display: flex;
-        gap: 0.5rem;
-        margin-bottom: 1.5rem;
-  
-        input {
-          width: 50px;
-          height: 50px;
-          text-align: center;
-          font-size: 1.25rem;
-          border: 1px solid #ccc;
-          border-radius: 8px;
-  
-          &:focus {
-            outline: 2px solid #4b8cff;
-            border-color: #4b8cff;
-          }
-        }
-      }
-  
-      .otp-submit {
-        background-color: #4b8cff;
-        color: white;
-        font-size: 1.2rem;
-        padding: 0.75rem;
-        border: none;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+
+      input {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-size: 1.25rem;
+        border: 1px solid #ccc;
         border-radius: 8px;
-        cursor: pointer;
-        width: 100%;
-        max-width: 200px;
-        transition: background-color 0.3s;
-        margin-top: 50px;
-  
-        &:hover {
-          background-color: #3a70c1;
+
+        &:focus {
+          outline: 2px solid #4b8cff;
+          border-color: #4b8cff;
         }
       }
     }
-  
-    .resend-otp {
-      color: #777;
-      margin-top: 1rem;
-  
+
+    .otp-submit {
+      background-color: #4b8cff;
+      color: white;
+      font-size: 1.2rem;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      max-width: 200px;
+      transition: background-color 0.3s;
+      margin-top: 50px;
+
       &:hover {
-        text-decoration: underline;
-        cursor: pointer;
+        background-color: #3a70c1;
       }
     }
   }
-  
-  /* -------------------------------------------- */
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .otp-card {
-      padding: 2rem;
-      max-width: 90%;
-      height: auto; /* Let it expand if needed */
-  
-      h2 {
-        font-size: 1.6rem;
+
+  .resend-otp {
+    color: #777;
+    margin-top: 1rem;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+/* -------------------------------------------- */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .otp-card {
+    padding: 2rem;
+    max-width: 90%;
+    height: auto;
+    /* Let it expand if needed */
+
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    .otp-form {
+      .otp-inputs {
+        input {
+          width: 40px;
+          height: 40px;
+        }
       }
-  
-      .otp-form {
-        .otp-inputs {
-          input {
-            width: 40px;
-            height: 40px;
-          }
-        }
-  
-        .otp-submit {
-          font-size: 1rem;
-        }
+
+      .otp-submit {
+        font-size: 1rem;
       }
     }
   }
+}

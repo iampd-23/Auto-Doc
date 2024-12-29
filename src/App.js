@@ -4,6 +4,7 @@ import Signup from './pages/SignupORLogin';
 import OTPPage from './pages/OTPPage';
 import ErrorPage from './pages/ErrorPage';
 import ErrorPage2 from './pages/ErrorPage2';
+import ProfileInitial from './pages/profileInitial';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 
             <Route path="/error" element={<ErrorPage />} />
             <Route path="/error2" element={<ErrorPage2 />} />
+            <Route path="/profile" element={<ProfileInitial />} />
 
             
           </Routes>
