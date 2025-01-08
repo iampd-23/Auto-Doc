@@ -1,7 +1,7 @@
 //Third Screen - OTP Verification Page
 
 import React, { useState } from "react";
-import "../styles/OTPPage.scss"; 
+import "../../styles/OTPPage.scss"; 
 
 const OTPVerification = () => {
   const [otp, setOtp] = useState(Array(6).fill(""));

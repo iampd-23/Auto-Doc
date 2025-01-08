@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useNavigate } from "react-router-dom"; 
-import "../styles/SignupORLogin.scss";
+import "../../styles/SignupORLogin.scss"; 
 
 const LoginSignup = () => {
   const navigate = useNavigate();

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/Dashboard2.scss";
+import "../../styles/Dashboard2.scss";
 
 const Dashboard = () => {
   const [currentStep, setCurrentStep] = useState(0);

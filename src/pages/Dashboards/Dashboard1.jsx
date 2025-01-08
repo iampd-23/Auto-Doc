@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
-import "../styles/Dashboard1.scss"; // Custom SCSS file for styling
+import "../../styles/Dashboard1.scss"; // Custom SCSS file for styling
 
 const Dashboard = () => {
   const navigate = useNavigate(); // Initialize navigate hook

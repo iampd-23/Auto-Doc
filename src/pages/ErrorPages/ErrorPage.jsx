@@ -1,12 +1,12 @@
-// Error Page when Not logined
+// Error Page when logined
 
 import React from "react";
-import "../styles/ErrorPage.scss";
+import "../../styles/ErrorPage.scss";
 
 const NotFound = () => {
   const handleBackToDashboard = () => {
     // Put your actual navigation or redirect logic here.
-    alert("Redirecting to homepage...");
+    alert("Redirecting to dashboard...");
   };
 
   return (
@@ -23,7 +23,7 @@ const NotFound = () => {
         <h2>Looks like you’ve got lost…</h2>
 
         <button onClick={handleBackToDashboard}>
-          Back to Homepage
+          Back to Dashboard
         </button>
       </div>
     </div>

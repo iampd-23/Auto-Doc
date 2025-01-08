@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Signup from './pages/SignupORLogin';
-import OTPPage from './pages/OTPPage';
-import ErrorPage from './pages/ErrorPage';
-import ErrorPage2 from './pages/ErrorPage2';
-import ProfileInitial from './pages/profileInitial';
-import Dashboard1 from './pages/Dashboard1';
-import Dashboard2 from './pages/Dashboard2';
-import SummaryPage from "./pages/SummaryPage";
+import Signup from './pages/SignupORLogin/SignupORLogin';
+import OTPPage from './pages/SignupORLogin/OTPPage';
+import ErrorPage from './pages/ErrorPages/ErrorPage';
+import ErrorPage2 from './pages/ErrorPages/ErrorPage2';
+import ProfileInitial from './pages/Profile/profileInitial';
+import Dashboard1 from './pages/Dashboards/Dashboard1';
+import Dashboard2 from './pages/Dashboards/Dashboard2';
+import SummaryPage from "./pages/Dashboards/SummaryPage";
 
 
 function App() {

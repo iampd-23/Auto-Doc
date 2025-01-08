@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/SummaryPage.scss"; // SCSS file for styling
+import "../../styles/SummaryPage.scss";
 
 const SummaryPage = () => {
   const handleCopy = () => {

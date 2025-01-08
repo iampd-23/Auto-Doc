@@ -1,7 +1,7 @@
 // Initial Profile 
 
 import React, { useState } from "react";
-import "../styles/profileInitial.scss"; 
+import "../../styles/profileInitial.scss"; 
 
 const EditProfile = () => {
   // Example state for controlled inputs
