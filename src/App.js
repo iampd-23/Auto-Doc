@@ -5,6 +5,9 @@ import OTPPage from './pages/OTPPage';
 import ErrorPage from './pages/ErrorPage';
 import ErrorPage2 from './pages/ErrorPage2';
 import ProfileInitial from './pages/profileInitial';
+import Dashboard1 from './pages/Dashboard1';
+import Dashboard2 from './pages/Dashboard2';
+import SummaryPage from "./pages/SummaryPage";
 
 
 function App() {
@@ -19,6 +22,10 @@ function App() {
             <Route path="/error" element={<ErrorPage />} />
             <Route path="/error2" element={<ErrorPage2 />} />
             <Route path="/profile" element={<ProfileInitial />} />
+
+            <Route path="/dashboard" element={<Dashboard1 />} />
+            <Route path="/dashboard2" element={<Dashboard2 />} />
+            <Route path="/summary" element={<SummaryPage />} />
 
             
           </Routes>

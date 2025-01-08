@@ -1,0 +1,176 @@
+/* Dashboard Page Styling */
+.dashboard-page {
+    display: flex;
+    min-height: 100vh;
+    font-family: "Helvetica", Arial, sans-serif;
+    background-color: #f8f9fc;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 240px;
+    background-color: #fff;
+    border-right: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+  
+    .sidebar-logo {
+      padding: 1.5rem;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #4b8bf4;
+    }
+  
+    .sidebar-links {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+  
+      .nav-link {
+        padding: 0.75rem 1rem;
+        margin-bottom: 0.5rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 1rem;
+        color: #555;
+        cursor: pointer;
+  
+        &.active {
+          background-color: #4b8bf4;
+          color: #fff;
+        }
+  
+        &:hover {
+          background-color: #eaf1ff;
+        }
+      }
+  
+      .bottom-links {
+        margin-top: auto;
+      }
+    }
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 1rem;
+  
+      .search-bar input {
+        width: 300px;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+  
+        &:focus {
+          outline: 2px solid #cce0ff;
+        }
+      }
+  
+      .user-info {
+        .greeting {
+          font-size: 1.2rem;
+          font-weight: 500;
+          color: #333;
+        }
+      }
+    }
+  
+    .welcome-section {
+      padding: 2rem;
+  
+      .welcome-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        padding: 2rem;
+        text-align: center;
+  
+        h2 {
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+        }
+  
+        p {
+          font-size: 1rem;
+          color: #555;
+          margin-bottom: 1.5rem;
+        }
+  
+        ul {
+          text-align: left;
+          margin-bottom: 2rem;
+  
+          li {
+            font-size: 1rem;
+            color: #555;
+            margin: 0.5rem 0;
+          }
+        }
+  
+        .get-started-button {
+          background-color: #4b8bf4;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          padding: 0.75rem 2rem;
+          font-size: 1rem;
+          cursor: pointer;
+  
+          &:hover {
+            background-color: #3a70c1;
+          }
+        }
+      }
+    }
+  
+    .how-to-section {
+      padding: 2rem;
+  
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+  
+      .how-to-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        padding: 2rem;
+        text-align: center;
+  
+        .how-to-image {
+          width: 100px;
+          height: 100px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+  
+    .topbar {
+      .search-bar input {
+        width: 150px;
+      }
+    }
+  
+    .welcome-card {
+      padding: 1rem;
+    }
+  }

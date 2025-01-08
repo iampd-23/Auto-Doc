@@ -1,0 +1,295 @@
+.dashboard-page {
+    display: flex;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 240px;
+    background: #fff;
+    border-right: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  
+    .sidebar-logo {
+      padding: 1.5rem;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #4b8bf4;
+    }
+  
+    .sidebar-links {
+      padding: 1rem;
+  
+      .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+        margin-bottom: 0.5rem;
+        color: #555;
+        text-decoration: none;
+        border-radius: 6px;
+  
+        &.active {
+          background: #4b8bf4;
+          color: #fff;
+        }
+  
+        &:hover {
+          background: #eaf1ff;
+        }
+      }
+    }
+  
+    .bottom-links {
+      padding: 1rem;
+  
+      .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+        margin-bottom: 0.5rem;
+        color: #555;
+        text-decoration: none;
+        border-radius: 6px;
+  
+        &:hover {
+          background: #eaf1ff;
+        }
+  
+        .icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    padding: 2rem;
+  
+    /* Progress Steps */
+    .progress-steps {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+  
+      .step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+  
+        .circle {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: #f1f3f5;
+          color: #888;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 0.5rem;
+          transition: background 0.3s ease, color 0.3s ease;
+        }
+  
+        &.completed .circle {
+          background: #4b8bf4;
+          color: white;
+        }
+  
+        p {
+          margin: 0;
+          font-size: 0.9rem;
+          color: #555;
+        }
+      }
+    }
+  
+    /* Step Cards */
+    .step-cards {
+      display: flex;
+      gap: 2rem;
+  
+      .card {
+        flex: 1;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        padding: 1.5rem;
+  
+        h3 {
+          font-size: 1.2rem;
+          margin-bottom: 1.5rem;
+          color: #333;
+        }
+  
+        /* Step 1: Patient Details */
+        .patient-details-form {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+  
+          .form-group {
+            display: flex;
+            flex-direction: column;
+  
+            label {
+              font-size: 0.9rem;
+              margin-bottom: 0.5rem;
+              color: #333;
+            }
+  
+            input,
+            select {
+              padding: 0.75rem;
+              border: 1px solid #ddd;
+              border-radius: 6px;
+              font-size: 0.9rem;
+  
+              &:focus {
+                outline: 2px solid #4b8bf4;
+              }
+            }
+          }
+        }
+  
+        /* Step 2: Upload Documents */
+        .upload-area {
+          background: #f8f9fc;
+          padding: 1.5rem;
+          border: 2px dashed #ccc;
+          text-align: center;
+          border-radius: 6px;
+          margin-bottom: 1.5rem;
+  
+          .browse-button {
+            background: #4b8bf4;
+            color: white;
+            border-radius: 6px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+  
+            &:hover {
+              background: #3a70c1;
+            }
+          }
+        }
+  
+        .uploaded-files {
+          list-style: none;
+          padding: 0;
+  
+          .file-item {
+            padding: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 6px;
+            margin-bottom: 0.75rem;
+  
+            &.success {
+              background: #eafaf1;
+              color: #2e7d32;
+            }
+  
+            &.failed {
+              background: #fdecea;
+              color: #c62828;
+  
+              .retry-button {
+                background: transparent;
+                color: #c62828;
+                border: none;
+                cursor: pointer;
+  
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+  
+            &.uploading {
+              background: #fff8e1;
+              color: #f9a825;
+            }
+          }
+        }
+  
+        /* Step 3: Voice Notes */
+        .record-button {
+          background: #ff1744;
+          color: white;
+          border-radius: 6px;
+          padding: 0.75rem 1.5rem;
+          margin-bottom: 1.5rem;
+          cursor: pointer;
+  
+          &:hover {
+            background: #d50000;
+          }
+        }
+  
+        .transcription {
+          background: #f8f9fc;
+          padding: 1rem;
+          border-radius: 6px;
+          font-size: 0.9rem;
+          color: #555;
+        }
+  
+        /* Step 4: Additional Notes */
+        .additional-notes-textarea {
+          width: 100%;
+          height: 100px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          padding: 0.1rem;
+        }
+  
+        /* Next Step Button */
+        .next-button {
+            background-color: #4b8bf4;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            width: 100%;
+            max-width: 150px;
+            text-align: center;
+          
+            &:hover {
+              background-color: #3a70c1;
+            }
+          }
+      }
+    }
+  }
+  .generate-summary-container {
+    margin-top: 2rem;
+    text-align: center;
+  
+    .generate-summary-button {
+      background-color: #4b8bf4;
+      color: white;
+      font-size: 1.2rem;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #3a70c1;
+      }
+    }
+  }
+  
