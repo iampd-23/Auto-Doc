@@ -1,0 +1,154 @@
+.subscription-page {
+    display: flex;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fc;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 240px;
+    background-color: #fff;
+    border-right: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    .sidebar-logo {
+      padding: 1.5rem;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #4b8bf4;
+    }
+  
+    .sidebar-links {
+      padding: 1rem;
+  
+      .nav-link {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        margin-bottom: 0.5rem;
+        color: #555;
+        text-decoration: none;
+        border-radius: 6px;
+  
+        &.active {
+          background-color: #4b8bf4;
+          color: #fff;
+        }
+  
+        &:hover {
+          background-color: #eaf1ff;
+        }
+  
+        .icon {
+          width: 18px;
+          height: 18px;
+          margin-right: 8px;
+        }
+      }
+  
+      .bottom-links {
+        margin-top: auto;
+        padding: 1rem;
+      }
+    }
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    padding: 2rem;
+  
+    .page-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+  
+    .subscription-cards {
+      display: flex;
+      gap: 2rem;
+    }
+  
+    .plan-card,
+    .usage-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      text-align: center;
+    }
+  
+    .plan-card {
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+  
+      p {
+        font-size: 0.9rem;
+        color: #777;
+      }
+  
+      h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #4b8bf4;
+        margin-bottom: 1rem;
+      }
+  
+      .current-plan-btn {
+        background: none;
+        border: 1px solid #4b8bf4;
+        color: #4b8bf4;
+        padding: 0.5rem 1.5rem;
+        border-radius: 6px;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: #eaf1ff;
+        }
+      }
+  
+      .features-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+  
+        li {
+          padding: 0.5rem 0;
+          color: #555;
+  
+          &.disabled {
+            color: #ccc;
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+  
+    .usage-card {
+      .usage-chart {
+        margin-bottom: 1rem;
+      }
+  
+      .discharge-left {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #333;
+      }
+  
+      .credits-text {
+        margin-top: 1rem;
+        color: #777;
+      }
+  
+      .contact-email {
+        font-size: 0.9rem;
+        color: #4b8bf4;
+      }
+    }
+  }

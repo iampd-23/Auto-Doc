@@ -1,10 +1,7 @@
-// Initial Profile 
-
 import React, { useState } from "react";
-import "../../styles/profileInitial.scss"; 
+import "../../styles/settings.scss";
 
 const EditProfile = () => {
-  // Example state for controlled inputs
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -20,7 +17,6 @@ const EditProfile = () => {
   };
 
   const handleSave = () => {
-    // Do something with the form data
     alert("Profile Saved!");
   };
 
@@ -28,34 +24,39 @@ const EditProfile = () => {
     <div className="edit-profile-page">
       {/* Sidebar */}
       <aside className="sidebar">
-        <div className="sidebar-logo">
-          AutoDoc
-        </div>
+        <div className="sidebar-logo">AutoDoc</div>
+
+        {/* Top Links */}
         <nav className="sidebar-links">
-          <div className="nav-link">Settings</div>
-          <div className="nav-link">Logout</div>
+          <a href="/dashboard" className="nav-link">
+            {/* <img src="/assets/dashboard-icon.png" alt="Dashboard" /> */}
+            Dashboard
+          </a>
+          <a href="/history" className="nav-link active">
+            {/* <img src="/assets/profile-icon.png" alt="Profile" /> */}
+            History
+          </a>
         </nav>
+
+        {/* Bottom Links */}
+        <div className="bottom-links">
+          {/* <a href="/settings" className="nav-link">
+            <img src="/assets/settings.png" alt="Settings" />
+            Settings
+          </a> */}
+          <a href="/logout" className="nav-link">
+            <img src="/assets/logout.png" alt="Logout" />
+            Logout
+          </a>
+        </div>
       </aside>
 
-      {/* Main content */}
+      {/* Main Content */}
       <div className="main-content">
-        {/* Header / Topbar */}
-        <header className="topbar">
-          <div className="search-bar">
-            <input type="text" placeholder="Search" />
-          </div>
-          <div className="user-info">
-            <span className="notification-bell">🔔</span>
-            <span className="language">English ▼</span>
-            <span className="user-name">Moni Roy (Admin)</span>
-          </div>
-        </header>
-
-        {/* Content section */}
         <div className="content">
           <h1 className="page-title">Edit Profile</h1>
 
-          {/* White Card */}
+          {/* Profile Card */}
           <div className="edit-profile-card">
             {/* Upload Photo */}
             <div className="upload-section">
@@ -67,7 +68,6 @@ const EditProfile = () => {
 
             {/* Form */}
             <div className="form-grid">
-              {/* First Name */}
               <div className="form-group">
                 <label>First Name</label>
                 <input
@@ -78,7 +78,6 @@ const EditProfile = () => {
                 />
               </div>
 
-              {/* Last Name */}
               <div className="form-group">
                 <label>Last Name</label>
                 <input
@@ -89,9 +88,8 @@ const EditProfile = () => {
                 />
               </div>
 
-              {/* Email */}
               <div className="form-group">
-                <label>Your Email</label>
+                <label>Email</label>
                 <input
                   name="email"
                   placeholder="Enter your email"
@@ -100,7 +98,6 @@ const EditProfile = () => {
                 />
               </div>
 
-              {/* Phone */}
               <div className="form-group">
                 <label>Phone Number</label>
                 <input
@@ -111,7 +108,6 @@ const EditProfile = () => {
                 />
               </div>
 
-              {/* Hospital Name */}
               <div className="form-group">
                 <label>Hospital Name</label>
                 <input
@@ -122,7 +118,6 @@ const EditProfile = () => {
                 />
               </div>
 
-              {/* Gender */}
               <div className="form-group">
                 <label>Gender</label>
                 <select

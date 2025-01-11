@@ -1,0 +1,136 @@
+.pricing-loggedin-page {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fc;
+}
+
+/* Sidebar */
+.pricing-sidebar {
+  width: 240px;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .pricing-sidebar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4b8bf4;
+    padding: 1.5rem;
+  }
+
+  .pricing-sidebar-links {
+    padding: 1rem;
+
+    .pricing-nav-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.5rem;
+      border-radius: 6px;
+      color: #555;
+      text-decoration: none;
+      transition: background 0.3s;
+
+      .pricing-icon {
+        width: 20px;
+        height: 20px;
+      }
+
+      &:hover {
+        background: #eaf1ff;
+      }
+
+      &.active {
+        background: #4b8bf4;
+        color: #fff;
+      }
+    }
+  }
+
+  .pricing-bottom-links {
+    padding: 1rem;
+  }
+}
+
+/* Main Content */
+.pricing-main-content {
+  flex: 1;
+  padding: 2rem;
+
+  .pricing-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .pricing-cards-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+
+    .pricing-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+
+      &.premium-plan {
+        border: 2px solid #4b8bf4;
+      }
+
+      .pricing-plan-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      .pricing-monthly-charge {
+        font-size: 1rem;
+        color: #777;
+        margin-bottom: 1rem;
+      }
+
+      .pricing-plan-price {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #4b8bf4;
+        margin-bottom: 1.5rem;
+      }
+
+      .pricing-current-plan-button,
+      .pricing-get-started-button {
+        background: #4b8bf4;
+        color: white;
+        padding: 0.75rem 2rem;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-bottom: 1.5rem;
+
+        &:hover {
+          background: #3a70c1;
+        }
+      }
+
+      .pricing-features-list {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 0.5rem;
+
+          &.pricing-disabled-feature {
+            color: #ccc;
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+  }
+}

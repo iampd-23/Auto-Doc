@@ -1,0 +1,145 @@
+.pricing-page {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  
+    /* Navbar */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+      .navbar-logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #4b8bf4;
+      }
+  
+      .navbar-search {
+        input {
+          width: 300px;
+          padding: 0.5rem;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          font-size: 1rem;
+  
+          &:focus {
+            outline: 2px solid #4b8bf4;
+          }
+        }
+      }
+  
+      .navbar-user {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+  
+        .notification {
+          font-size: 1.2rem;
+          cursor: pointer;
+        }
+  
+        .language {
+          cursor: pointer;
+        }
+  
+        .user-info {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+  
+          .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+          }
+        }
+      }
+    }
+  
+    /* Pricing Section */
+    .pricing-section {
+      padding: 2rem;
+      text-align: center;
+  
+      .pricing-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        color: #333;
+      }
+  
+      .pricing-cards {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+  
+        .pricing-card {
+          background: #fff;
+          border-radius: 12px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          padding: 2rem;
+          width: 300px;
+          text-align: center;
+  
+          &.premium {
+            border: 2px solid #4b8bf4;
+          }
+  
+          .plan-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+          }
+  
+          .monthly-charge {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 1rem;
+          }
+  
+          .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4b8bf4;
+            margin-bottom: 1.5rem;
+          }
+  
+          .get-started-button {
+            background: #4b8bf4;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0.75rem 2rem;
+            cursor: pointer;
+            margin-bottom: 2rem;
+  
+            &:hover {
+              background: #3a70c1;
+            }
+          }
+  
+          .features-list {
+            list-style: none;
+            padding: 0;
+  
+            li {
+              margin-bottom: 0.5rem;
+              color: #555;
+  
+              &.disabled {
+                color: #ccc;
+                text-decoration: line-through;
+              }
+            }
+          }
+        }
+      }
+    }
+  }

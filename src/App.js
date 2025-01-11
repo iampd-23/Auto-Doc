@@ -4,10 +4,13 @@ import Signup from './pages/SignupORLogin/SignupORLogin';
 import OTPPage from './pages/SignupORLogin/OTPPage';
 import ErrorPage from './pages/ErrorPages/ErrorPage';
 import ErrorPage2 from './pages/ErrorPages/ErrorPage2';
-import ProfileInitial from './pages/Profile/profileInitial';
+import Settings from './pages/Profile/settings';
 import Dashboard1 from './pages/Dashboards/Dashboard1';
 import Dashboard2 from './pages/Dashboards/Dashboard2';
 import SummaryPage from "./pages/Dashboards/SummaryPage";
+import PricingPage from './pages/Pricing/pricingpage';
+import PricingPage2 from './pages/Pricing/pricingpage2';
+import SubscriptionPage from './pages/Pricing/subscriptionpage';
 
 
 function App() {
@@ -21,11 +24,15 @@ function App() {
 
             <Route path="/error" element={<ErrorPage />} />
             <Route path="/error2" element={<ErrorPage2 />} />
-            <Route path="/profile" element={<ProfileInitial />} />
+            <Route path="/settings" element={<Settings />} />
 
             <Route path="/dashboard" element={<Dashboard1 />} />
             <Route path="/dashboard2" element={<Dashboard2 />} />
             <Route path="/summary" element={<SummaryPage />} />
+
+            <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/pricing2" element={<PricingPage2 />} />
+            <Route path="/subscription" element={<SubscriptionPage />} />
 
             
           </Routes>

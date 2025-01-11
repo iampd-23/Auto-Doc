@@ -1,10 +1,17 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
-import "../../styles/Dashboard1.scss"; // Custom SCSS file for styling
+import { useNavigate } from "react-router-dom";
+import "../../styles/Dashboard1.scss"; // SCSS for styling
 
 const Dashboard = () => {
-  const navigate = useNavigate(); // Initialize navigate hook
+  const navigate = useNavigate();
 
+  // Logout handler to navigate to the signup page
+  const handleLogout = (e) => {
+    e.preventDefault();  // Prevent default anchor behavior
+    navigate("/signup"); // Redirect to signup page
+  };
+
+  // Handler for the "Get Started" button
   const handleGetStarted = () => {
     navigate("/dashboard2"); // Navigate to Dashboard 2
   };
@@ -16,27 +23,24 @@ const Dashboard = () => {
         <div className="sidebar-logo">AutoDoc</div>
         <nav className="sidebar-links">
           <a href="/dashboard" className="nav-link active">Dashboard</a>
-          <a href="/patient" className="nav-link">Patient</a>
-          <a href="/chat" className="nav-link">Chat</a>
-          <div className="bottom-links">
-            <a href="/settings" className="nav-link">Settings</a>
-            <a href="/logout" className="nav-link">Logout</a>
-          </div>
+          <a href="/history" className="nav-link">History</a>
         </nav>
+
+        {/* Bottom Links with Icons */}
+        <div className="bottom-links">
+          <a href="/settings" className="nav-link">
+            <img src="/assets/settings.png" alt="Settings" className="icon" />
+            Settings
+          </a>
+          <a href="/signup" onClick={handleLogout} className="nav-link">
+            <img src="/assets/logout.png" alt="Logout" className="icon" />
+            Logout
+          </a>
+        </div>
       </aside>
 
-      {/* Main content area */}
+      {/* Main Content */}
       <div className="main-content">
-        {/* Topbar */}
-        <header className="topbar">
-          <div className="search-bar">
-            <input type="text" placeholder="Search" />
-          </div>
-          <div className="user-info">
-            <span className="greeting">Hey Moni 👋</span>
-          </div>
-        </header>
-
         {/* Welcome Section */}
         <section className="welcome-section">
           <div className="welcome-card">
@@ -58,7 +62,6 @@ const Dashboard = () => {
         <section className="how-to-section">
           <h2>How to use?</h2>
           <div className="how-to-card">
-            {/* Video Section */}
             <a
               href="https://www.youtube.com/watch?v=your-video-link"
               target="_blank"
@@ -68,7 +71,7 @@ const Dashboard = () => {
               <video
                 className="how-to-video"
                 controls
-                poster="/assets/video-thumbnail.png" // Optional thumbnail image
+                poster="/assets/video-thumbnail.png"
               >
                 <source src="/assets/how-to-video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.

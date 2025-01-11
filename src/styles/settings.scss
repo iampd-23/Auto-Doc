@@ -1,0 +1,167 @@
+/* Profile Page */
+.edit-profile-page {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Helvetica", Arial, sans-serif;
+  background-color: #f8f9fc;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background-color: #fff;
+  border-right: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .sidebar-logo {
+    padding: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #4b8bf4;
+  }
+
+  /* Sidebar Top Links */
+  .sidebar-links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      border-radius: 6px;
+      color: #555;
+      font-size: 0.9rem;
+      text-decoration: none;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+
+      &.active {
+        background-color: #4b8bf4;
+        color: #fff;
+      }
+    }
+  }
+
+  /* Sidebar Bottom Links */
+  .bottom-links {
+    padding: 1rem;
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      color: #555;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      &:hover {
+        background-color: #eaf1ff;
+      }
+    }
+  }
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+
+  .page-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  .edit-profile-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+
+    .upload-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      .upload-photo {
+        width: 80px;
+        height: 80px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .upload-text {
+        font-size: 0.95rem;
+        color: #4b8bf4;
+      }
+    }
+
+    /* Form Grid */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          margin-bottom: 0.5rem;
+          font-size: 0.9rem;
+          color: #333;
+        }
+
+        input,
+        select {
+          padding: 0.75rem;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+        }
+      }
+    }
+
+    /* Save Button */
+    .save-button-container {
+      margin-top: 2rem;
+      text-align: center;
+
+      .save-button {
+        background-color: #4b8bf4;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 0.75rem 2rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #3a70c1;
+        }
+      }
+    }
+  }
+}

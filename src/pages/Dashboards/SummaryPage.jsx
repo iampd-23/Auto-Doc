@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "../../styles/SummaryPage.scss";
 
 const SummaryPage = () => {
+  const navigate = useNavigate(); // Initialize navigation
+
   const handleCopy = () => {
     alert("Summary copied to clipboard!");
   };
@@ -11,25 +14,24 @@ const SummaryPage = () => {
   };
 
   const handleEdit = () => {
-    alert("Navigating to the edit page...");
+    navigate("/dashboard2"); // Navigate to Dashboard 2 on Edit click
   };
 
   return (
     <div className="summary-page">
       {/* Sidebar */}
       <aside className="sidebar">
-        <div className="sidebar-logo">DashStack</div>
+        <div className="sidebar-logo">AutoDoc</div>
         <nav className="sidebar-links">
           <a href="/dashboard" className="nav-link active">Dashboard</a>
-          <a href="/patient" className="nav-link">Patient</a>
-          <a href="/chat" className="nav-link">Chat</a>
+          <a href="/history" className="nav-link">History</a>
         </nav>
         <div className="bottom-links">
           <a href="/settings" className="nav-link">
             <img src="/assets/settings.png" alt="Settings" className="icon" />
             Settings
           </a>
-          <a href="/logout" className="nav-link">
+          <a href="/signup" className="nav-link">
             <img src="/assets/logout.png" alt="Logout" className="icon" />
             Logout
           </a>

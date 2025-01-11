@@ -31,7 +31,10 @@ const Dashboard = () => {
       setUploadedFiles((prevFiles) =>
         prevFiles.map((file) =>
           updatedFiles.some((f) => f.name === file.name)
-            ? { ...file, status: file.name.endsWith(".pdf") ? "success" : "failed" }
+            ? {
+                ...file,
+                status: file.name.endsWith(".pdf") ? "success" : "failed",
+              }
             : file
         )
       );
@@ -49,7 +52,10 @@ const Dashboard = () => {
       setUploadedFiles((prevFiles) =>
         prevFiles.map((file) =>
           file.name === fileName
-            ? { ...file, status: file.name.endsWith(".pdf") ? "success" : "failed" }
+            ? {
+                ...file,
+                status: file.name.endsWith(".pdf") ? "success" : "failed",
+              }
             : file
         )
       );
@@ -83,22 +89,32 @@ const Dashboard = () => {
     navigate("/summary");
   };
 
+  // 👉 Logout Handler: Redirects to signup page
+  const handleLogout = () => {
+    navigate("/signup");
+  };
+
   return (
     <div className="dashboard-page">
       {/* Sidebar */}
       <aside className="sidebar">
-        <div className="sidebar-logo">Auto Doc</div>
+        <div className="sidebar-logo">AutoDoc</div>
         <nav className="sidebar-links">
-          <a href="/dashboard" className="nav-link active">Dashboard</a>
-          <a href="/patient" className="nav-link">Patient</a>
-          <a href="/chat" className="nav-link">Chat</a>
+          <a href="/dashboard" className="nav-link active">
+            Dashboard
+          </a>
+          <a href="/history" className="nav-link">
+            History
+          </a>
         </nav>
+
+        {/* Bottom Links */}
         <div className="bottom-links">
           <a href="/settings" className="nav-link">
             <img src="/assets/settings.png" alt="Settings" className="icon" />
             Settings
           </a>
-          <a href="/logout" className="nav-link">
+          <a href="/signup" className="nav-link">
             <img src="/assets/logout.png" alt="Logout" className="icon" />
             Logout
           </a>
@@ -109,7 +125,12 @@ const Dashboard = () => {
       <div className="main-content">
         {/* Progress Steps */}
         <div className="progress-steps">
-          {["Patient Details", "Upload Documents", "Voice Notes", "Additional Notes"].map((step, index) => (
+          {[
+            "Patient Details",
+            "Upload Documents",
+            "Voice Notes",
+            "Additional Notes",
+          ].map((step, index) => (
             <div
               key={index}
               className={`step ${index <= currentStep ? "completed" : ""}`}
@@ -124,7 +145,9 @@ const Dashboard = () => {
         <div className="step-cards">
           {/* Step 1: Patient Details */}
           <div className="card">
-            <h3>Patient Details <br /> (Step 1)</h3>
+            <h3>
+              Patient Details <br /> (Step 1)
+            </h3>
             <div className="patient-details-form">
               <div className="form-group">
                 <label>Patient Name</label>
@@ -162,9 +185,11 @@ const Dashboard = () => {
             </div>
           </div>
 
-          {/* Step 2: Documents */}
+          {/* Step 2: Upload Documents */}
           <div className="card">
-            <h3>Documents <br /> (Step 2)</h3>
+            <h3>
+              Documents <br /> (Step 2)
+            </h3>
             <div className="upload-area">
               <p>Drag and drop files here or</p>
               <input
@@ -193,19 +218,25 @@ const Dashboard = () => {
 
           {/* Step 3: Voice Notes */}
           <div className="card">
-            <h3>Voice Notes <br /> (Step 3)</h3>
+            <h3>
+              Voice Notes <br /> (Step 3)
+            </h3>
             <button
               className="record-button"
               onClick={() => setVoiceNote(true)}
             >
               🔴 Start Recording
             </button>
-            <div className="transcription">Start speaking to see transcription...</div>
+            <div className="transcription">
+              Start speaking to see transcription...
+            </div>
           </div>
 
           {/* Step 4: Additional Notes */}
           <div className="card">
-            <h3>Additional Notes <br /> (Step 4)</h3>
+            <h3>
+              Additional Notes <br /> (Step 4)
+            </h3>
             <textarea
               className="additional-notes-textarea"
               placeholder="Enter any additional notes here..."
